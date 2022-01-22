@@ -143,6 +143,7 @@ export const PlayerName = styled.div`
     font-size: 24px;
     font-weight: 700;
     text-transform: uppercase;
+    margin-left: 20px;
 `
 
 export const Class = styled.div`
@@ -160,8 +161,6 @@ export const BottomInfo = styled.div`
     align-self: stretch;
     align-items: center;
     background: linear-gradient(90deg, rgba(9,12,13,1) 0%, rgba(0,0,0,0) 100%);
-    gap: 20px;
-    
 `
 
 export const Agent = styled.div`
@@ -234,6 +233,10 @@ export const PlayersContainer = styled.div`
 
         & > ${FlexChild} > ${PlayerInfo} > ${IconContainer} > ${Agent} {
             transform: scaleX(-1);
+        }
+
+        & > ${FlexChild} > ${PlayerInfo} > ${BottomInfo} > ${PlayerName} {
+            margin-right: 20px;
         }
     `)}
 `
