@@ -344,5 +344,4 @@ export const Container = styled.div`
     padding: 0px;
     overflow-x: hidden;
     box-sizing: border-box;
-    background-color: black;
 `
