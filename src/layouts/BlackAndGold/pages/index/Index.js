@@ -32,6 +32,7 @@ import {
     BannedMap,
     PickedMap,
     MainMap,
+    MapName,
 } from "./Index.elements";
 
 const socket = openSocket("http://localhost:8000", {
@@ -105,7 +106,6 @@ const Index = () => {
         });
 
         socket.on("receiveVetoMaps", (vetoMaps) => {
-            console.log(vetoMaps);
             setVetoMaps(vetoMaps);
         });
 
@@ -208,32 +208,31 @@ const Index = () => {
                         <ShowMapVetoContainer isMapVeto={isMapVeto}>
                             <BannedMapsContainer team='bue' isMapVeto={isMapVeto}>
                                 <MapHeader>BANS</MapHeader>
-                                {vetoMaps.blue.bans.map(ban => {
+                                {vetoMaps.blue.bans.map((ban, idx) => {
                                     let mapImgURL = ban ? require(`../../../../assets/maps/${ban}.png`) : '';
-                                    console.log(ban);
                                     return (
-                                        <BannedMap imgURL={mapImgURL}/>
+                                        <BannedMap key={`blue_ban_${idx}`} imgURL={mapImgURL}><MapName>{ban}</MapName></BannedMap>
                                     )
                                 })}
                             </BannedMapsContainer>
                             <PickedMapContainer team='blue' isMapVeto={isMapVeto}>
                                 <MapHeader>PICK</MapHeader>
-                                <PickedMap imgURL={vetoMaps.blue.pick ? require(`../../../../assets/maps/${vetoMaps.blue.pick}.png`) : ""}/>
+                                <PickedMap imgURL={vetoMaps.blue.pick ? require(`../../../../assets/maps/${vetoMaps.blue.pick}.png`) : ""}><MapName>{vetoMaps.blue.pick}</MapName></PickedMap>
                             </PickedMapContainer>
                             <MainMapContainer isMapVeto={isMapVeto}>
                                 <MapHeader>ROUND MAP</MapHeader>
-                                <MainMap imgURL={vetoMaps.mainMap ? require(`../../../../assets/maps/${vetoMaps.mainMap}.png`) : ""}/>
+                                <MainMap imgURL={vetoMaps.mainMap ? require(`../../../../assets/maps/${vetoMaps.mainMap}.png`) : ""}><MapName>{vetoMaps.mainMap}</MapName></MainMap>
                             </MainMapContainer>
                             <PickedMapContainer team='red' isMapVeto={isMapVeto}>
                                 <MapHeader>PICK</MapHeader>
-                                <PickedMap imgURL={vetoMaps.red.pick ? require(`../../../../assets/maps/${vetoMaps.red.pick}.png`) : ""}/>
+                                <PickedMap imgURL={vetoMaps.red.pick ? require(`../../../../assets/maps/${vetoMaps.red.pick}.png`) : ""}><MapName>{vetoMaps.red.pick}</MapName></PickedMap>
                             </PickedMapContainer>
                             <BannedMapsContainer team='red' isMapVeto={isMapVeto}>
                                 <MapHeader>BANS</MapHeader>
-                                {vetoMaps.red.bans.map(ban => {
+                                {vetoMaps.red.bans.map((ban, idx) => {
                                     let mapImgURL = ban ? require(`../../../../assets/maps/${ban}.png`) : '';
                                     return (
-                                        <BannedMap imgURL={mapImgURL}/>
+                                        <BannedMap key={`red_ban_${idx}`} imgURL={mapImgURL}><MapName>{ban}</MapName></BannedMap>
                                     )
                                 })}
                             </BannedMapsContainer>

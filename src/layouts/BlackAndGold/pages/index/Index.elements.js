@@ -1,10 +1,23 @@
 import styled from "styled-components";
 
+export const MapName = styled.div`
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    color: white;
+    font-family: Impact;
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+`;
+
 export const MainMap = styled.div`
     width: 320px;
     height: 180px;
     box-sizing: border-box;
     border: 5px solid #BBA151;
+    position: relative;
 
     ${({ imgURL }) => imgURL && (`
         background-image: url(${imgURL});
@@ -18,6 +31,7 @@ export const PickedMap = styled.div`
     height: 180px;
     box-sizing: border-box;
     border: 5px solid #BBA151;
+    position: relative;
 
     ${({ imgURL }) => imgURL && (`
         background-image: url(${imgURL});
@@ -31,6 +45,7 @@ export const BannedMap = styled.div`
     height: 180px;
     box-sizing: border-box;
     border: 5px solid #BBA151;
+    position: relative;
 
     ${({ imgURL }) => imgURL && (`
         background-image: url(${imgURL});
@@ -61,6 +76,11 @@ export const MainMapContainer = styled.div`
             width: 800px;
             height: 450px;
         }
+
+        & > ${MainMap} > ${MapName} {
+            transition: 2s;
+            font-size: 48px;
+        }
     `)}
 `
 
@@ -78,7 +98,7 @@ export const PickedMapContainer = styled.div`
             border: 0px solid #BBA151;
         }
 
-        & > ${MapHeader} {
+        & > ${MapHeader}, & > ${PickedMap} > ${MapName} {
             transition: 2s;
             width: 0px;
             font-size: 0px;
@@ -102,7 +122,7 @@ export const BannedMapsContainer = styled.div`
             border: 0px solid #BBA151;
         }
 
-        & > ${MapHeader} {
+        & > ${MapHeader}, & > ${BannedMap} > ${MapName} {
             transition: 2s;
             width: 0px;
             font-size: 0px;
@@ -242,14 +262,18 @@ export const PlayersContainer = styled.div`
 `
 
 export const Game = styled.div`
+    font-family: Montserrat;
     font-size: 14px;
     margin-bottom: 5px;
 `;
 export const Round = styled.div`
+    font-family: Montserrat;
     font-size: 20px;
+    font-weight: 600;
 `;
 
 export const Timer = styled.div`
+    font-family: Montserrat;
     font-size: 60px;
 `;
 
