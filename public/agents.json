@@ -1,0 +1,74 @@
+{
+    "Brimstone": {
+        "id": 1,
+        "role": "Controller"
+    },
+    "Viper": {
+        "id": 2,
+        "role": "Controller"
+    },
+    "Omen": {
+        "id": 3,
+        "role": "Controller"
+    },
+    "Killjoy": {
+        "id": 4,
+        "role": "Sentinel"
+    },
+    "Cypher": {
+        "id": 5,
+        "role": "Sentinel"
+    },
+    "Sova": {
+        "id": 6,
+        "role": "Initiator"
+    },
+    "Sage": {
+        "id": 7,
+        "role": "Sentinel"
+    },
+    "Phoenix": {
+        "id": 9,
+        "role": "Duelist"
+    },
+    "Jett": {
+        "id": 10,
+        "role": "Duelist"
+    },
+    "Reyna": {
+        "id": 11,
+        "role": "Duelist"
+    },
+    "Raze": {
+        "id": 12,
+        "role": "Duelist"
+    },
+    "Breach": {
+        "id": 13,
+        "role": "Initiator"
+    },
+    "Skye": {
+        "id": 14,
+        "role": "Initiator"
+    },
+    "Yoru": {
+        "id": 15,
+        "role": "Duelist"
+    },
+    "Astra": {
+        "id": 16,
+        "role": "Controller"
+    },
+    "KAYO": {
+        "id": 17,
+        "role": "Initiator"
+    },
+    "Chamber": {
+        "id": 18,
+        "role": "Sentinel"
+    },
+    "Neon": {
+        "id": 19,
+        "role": "Duelist"
+    }
+}

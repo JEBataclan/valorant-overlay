@@ -1,0 +1,26 @@
+{
+    "blue": {
+        "initials": "CAFA",
+        "name": "PAROKYA NI DATAR",
+        "score": 2,
+        "IGNs": [
+            "tite",
+            "yuril",
+            "aeluxa",
+            "dwarpepe",
+            "bidek"]
+    },
+    "red": {
+        "initials": "COS",
+        "name": "TEAM I/O",
+        "score": 0,
+        "IGNs": [
+            "j3bb",
+            "cynaed",
+            "prince",
+            "melon",
+            "snow"]
+    },
+    "round": "FINALS",
+    "game": 1
+}
