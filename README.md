@@ -17,3 +17,5 @@ and
 In the the same or different browsers.
 
 Whatever you do in the "/Admin" page will reflect on the "/" page.
+
+Quick Demo: https://youtu.be/k1-NOQmAEiY
